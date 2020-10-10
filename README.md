@@ -1,18 +1,10 @@
-gnome-shell-extension-hide-dash
-=====================================
+# hide-dash-forked
 
-gnome-shell-extension-hide-dash is a simple extension that hides the dash
-from the activities overview. 
+Hide the dash (the menu to the left in gnome overview)
 
-If you find you dont use the dash or have a smaller screen you can use
-this extension to hide the dash and allow the windows and application 
-tabs to have a close to full-screen area.
+## Installation
 
-
-Installation
-------------
-
-To install the extension, clone this repository and symlink the directory
-"hide-dash@zacbarton.com" into "~/.local/share/gnome-shell/extensions/".
-Then restart gnome-shell (&lt;Alt&gt; + F2 and enter "r"), open
-gnome-tweak-tool and enable the extension.
+Clone this repo and symlink the directory "hide-dash-forked@farnasirim.com"
+into "~/.local/share/gnome-shell/extensions/".
+Then restart gnome-shell (Alt + F2, r, enter), open gnome-extensions-app, and
+enable the extension.
