@@ -1,0 +1,10 @@
+{
+	"shell-version": [
+		"3.38"
+	],
+	"uuid": "hide-dash-forked@farnasirim.com",
+	"name": "Hide Dash Forked",
+	"description": "Hide dash menu from gnome overview",
+	"url": "https://github.com/farnasirim/gnome-shell-extension-hide-dash-forked",
+	"version": "0.0.1"
+}
