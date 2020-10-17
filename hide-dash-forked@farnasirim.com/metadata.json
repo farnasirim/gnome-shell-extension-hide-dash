@@ -6,5 +6,5 @@
 	"name": "Hide Dash Forked",
 	"description": "Hide dash menu from gnome overview",
 	"url": "https://github.com/farnasirim/gnome-shell-extension-hide-dash-forked",
-	"version": "0.0.1"
+	"version": "0.0.2"
 }
