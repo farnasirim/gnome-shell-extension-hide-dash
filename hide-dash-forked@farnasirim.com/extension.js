@@ -3,7 +3,6 @@ const Main = imports.ui.main;
 
 let hideDash;
 
-// extension functions
 function init() {
 	hideDash = new HideDash();
 }
@@ -16,8 +15,6 @@ function disable() {
 	hideDash.disable();
 }
 
-
-// our HideDash object
 const HideDash = function() {
     this.init();
 }
@@ -25,36 +22,22 @@ const HideDash = function() {
 HideDash.prototype = {
 	init: function() {
 		this.observer = null;
-
-		// store the values we are going to override
-		this.old_x = Main.overview.viewSelector.actor.x;
-		this.old_width = Main.overview.viewSelector.actor.get_width();
 	},
 	
 	enable: function() {
-		// global.log("enable hide-dash");
 		this.observer = Main.overview.connect("showing", Lang.bind(this, this.hide));
 	},
 	
 	disable: function() {
-		// global.log("disable hide-dash");
 		Main.overview.disconnect(this.observer);
 		this.show();
 	},
 
 	hide: function() {
-		// global.log("show dash");
-		Main.overview.dash.actor.hide();
-		Main.overview.viewSelector.actor.set_x(0);
-		Main.overview.viewSelector.actor.set_width(Main.overview._group.get_width());
-		Main.overview.viewSelector.actor.queue_redraw();
+		Main.overview.dash.hide();
 	},
 
 	show: function() {
-		// global.log("hide dash");
-		Main.overview.dash.actor.show();
-		Main.overview.viewSelector.actor.set_x(this.old_x);
-		Main.overview.viewSelector.actor.set_width(this.old_width);
-		Main.overview.viewSelector.actor.queue_redraw();
+		Main.overview.dash.show();
 	}
 };
