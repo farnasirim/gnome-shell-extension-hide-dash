@@ -23,14 +23,14 @@ HideDash.prototype = {
 	init: function() {
 		this.observer = null;
 	},
-	
+
 	enable: function() {
 		this.observer = Main.overview.connect("showing", Lang.bind(this, this.hide));
 	},
-	
+
 	disable: function() {
-		Main.overview.disconnect(this.observer);
 		this.show();
+		Main.overview.disconnect(this.observer);
 	},
 
 	hide: function() {
